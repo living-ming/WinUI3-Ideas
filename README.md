@@ -1,4 +1,3 @@
-<img width="1222" height="803" alt="image" src="https://github.com/user-attachments/assets/3dad01b6-c5ed-4565-8ff5-c136a3f91f81" /># Ideas
 一个基于 WinUI 3 构建的高效笔记工具，支持注释管理、日程安排、日历联动、自定义背景主题。
 ## ✨ 功能特色
 
@@ -8,7 +7,11 @@
 - 🎨 自定义背景
 ## 📸 截图
 <img width="1222" height="803" alt="image" src="https://github.com/user-attachments/assets/d91ba37a-b293-4b76-ab79-bc8bb7d6c554" />
+
 ## 安装流程
+
  - 下载项目文件，通过VS打开sln文件，运行项目
+ 
  - 或下载压缩包，安装对应版本的签名文件至信任区，再点击对应版本的MSIX安装包安装即可
+  
  - 目前正在等待微软所说的免费开发者注册计划....还没有上架商店
