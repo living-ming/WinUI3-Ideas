@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="IDEAs.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IDEAs">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+                <ResourceDictionary Source="Dictionary/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Other app resources here -->
+            <AcrylicBrush x:Key="CustomAcrylicBrush"
+                      TintColor="Transparent"
+                      TintLuminosityOpacity="1"/>
+
+            <!-- 默认背景 -->
+                <SolidColorBrush x:Key="TextControlBackground" Color="Transparent"/>
+                <!-- 鼠标移上去 -->
+                <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="Transparent"/>
+                <!-- 拿到焦点 -->
+                <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Transparent"/>
+                <!-- 按下去 -->
+                <SolidColorBrush x:Key="TextControlBackgroundPressed" Color="Transparent"/>
+                <!-- 禁用时 -->
+                <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="Transparent"/>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

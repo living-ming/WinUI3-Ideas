@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IDEAs (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "IDEAs (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

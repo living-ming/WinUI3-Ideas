@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="IDEAs.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IDEAs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt"/>
+    </Window.SystemBackdrop>
+
+    <Grid>
+        
+        <Grid.Background>
+            <ImageBrush x:Name="BackGround" ImageSource="{x:Bind BackgroundPath,Mode=OneWay}" Opacity="{x:Bind BackgroundOpacity, Mode=OneWay}" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 自定义标题栏 -->
+        <Grid x:Name="AppTitleBar" Grid.Row="0" Height="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition x:Name="BackColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="DragColumn" Width="*"/>
+                <ColumnDefinition x:Name="SettingsColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="Fullscreen" Width="Auto"/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button x:Name="BackButton" 
+                    AutomationProperties.Name="列表展开/收缩"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Column="1" 
+                Height="32" 
+                Margin="0,0,16,0"
+                Click="BackButton_Click">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" />
+            </Button>
+
+            <Button x:Name="SettingsButton"
+                    AutomationProperties.Name="设置"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Column="3" 
+                Height="32" 
+                Margin="0,0,16,0"
+                Click="SettingsButton_Click">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" />
+            </Button>
+            <Button x:Name="FullScreenButton"
+                    AutomationProperties.Name="全屏"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Column="4" 
+                Height="32" 
+                Margin="0,0,16,0"
+                Click="FullScreenButton_Click">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE923;" />
+            </Button>
+        </Grid>
+
+        <Frame x:Name="MainFrame" Grid.Row="1"/>
+    </Grid>
+</Window>
