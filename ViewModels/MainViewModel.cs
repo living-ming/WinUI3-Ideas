@@ -23,6 +23,7 @@ namespace IDEAs.ViewModels
         public Schedule Schedule = new();
         public Item _selectedItem;
         public Folder _selectedFolder;
+        public Item _selectedFolderId;
         public ObservableCollection<Item> Items = new();
         public Func<List<Folder>, Task<Folder>> FolderSelectionDialog { get; set; }
         public ICommand CreateFolderCommand { get; }
@@ -582,13 +583,34 @@ namespace IDEAs.ViewModels
         private void CreateFolderFile()
         {
             var newFolder = _dataService.CreateFolder();
-            Items.Add(newFolder);
+            if (_selectedFolderId != null && _selectedFolder.FileType == "Folder")
+            {
+                newFolder.beFolderID = _selectedFolderId.Name;
+                _dataService.SaveToFile(newFolder);
+            }
+            else
+            {
+                // 没选文件夹，默认加到顶层？
+                Items.Add(newFolder);
+            }
+            RefreshItems();
+
         }
         private void CreateNoteFile()
         {
             var newNote = _dataService.CreateNote();
-            Items.Add(newNote);
+            if (_selectedFolderId != null && _selectedFolderId.FileType == "Folder")
+            {
+                newNote.beFolderID = _selectedFolderId.Name;
+                _dataService.SaveToFile(newNote);
 
+            }
+            else
+            {
+                // 没选文件夹，默认加到顶层？
+                Items.Add(newNote);
+            }
+            RefreshItems();
         }
 
         private Schedule CreateNewSchedule()

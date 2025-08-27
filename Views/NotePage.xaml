@@ -100,9 +100,9 @@
                         <MenuFlyoutItem Text="恢复默认"
                                         Click="FontDefautClick"/>
                         <MenuFlyoutItem Text="A-(Ctrl+O)"
-                                        Click="OnIncreaseFontSize"/>
+                                        Click="OnDecreaseFontSize"/>
                         <MenuFlyoutItem Text="A+(Ctrl+P)"
-                                        Click="OnDecreaseFontSize"/> 
+                                        Click="OnIncreaseFontSize"/> 
                         <MenuFlyoutItem Text="添加图片"
                                         Click="OnSelectImagesClick"/>
                     </MenuFlyout>

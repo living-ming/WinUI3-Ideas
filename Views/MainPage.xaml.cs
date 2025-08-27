@@ -377,6 +377,11 @@ namespace IDEAs.Views
             if (DataContext is MainViewModel viewModel)
             {
                 viewModel.ToggleMultiSelect();
+                if (viewModel.IsMultiSelectEnabled)
+                {
+                    MyTreeView.SelectionMode = ListViewSelectionMode.Multiple;
+                }
+                else MyTreeView.SelectionMode = ListViewSelectionMode.Single;
             }
         }
 

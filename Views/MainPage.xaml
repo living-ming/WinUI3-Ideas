@@ -144,9 +144,11 @@
                       Background="Transparent"
               ItemsSource="{x:Bind ViewModel.Items}"
               ItemTemplateSelector="{StaticResource ItemTemplateSelector}"
-                          SelectionMode="Multiple"
+                          SelectionMode="Single"
                           IsMultiSelectCheckBoxEnabled="{Binding IsMultiSelectEnabled, Mode=OneWay}"
-                          SelectionChanged="MyTreeView_SelectionChanged">
+                          SelectionChanged="MyTreeView_SelectionChanged"
+                          SelectedItem="{x:Bind ViewModel._selectedFolderId, Mode=TwoWay}">
+                    
                 </ListView>
                 
                 <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding IsMultiSelectEnabled, Mode=OneWay}">

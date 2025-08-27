@@ -195,7 +195,14 @@ namespace IDEAs.Services
                             string destPath = Path.Combine(newPath, fileName);
 
                             // 移动文件（如需保留旧文件可改为 File.Copy）
-                            File.Move(file, destPath, overwrite: true);
+                            using (FileStream sourceStream = new FileStream(file, FileMode.Open, FileAccess.Read))
+                            using (FileStream destStream = new FileStream(destPath, FileMode.Create, FileAccess.Write))
+                            {
+                                sourceStream.CopyTo(destStream);
+                            }
+
+                            // 删除原文件
+                            File.Delete(file);
                         }
                     }
                     catch (Exception ex)
