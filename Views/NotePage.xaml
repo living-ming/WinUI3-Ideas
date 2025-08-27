@@ -95,6 +95,15 @@
                 <RichEditBox.ContextFlyout>
                     <MenuFlyout>
                         <!-- 自定义“添加注释” -->
+                        <MenuFlyoutItem Text="复制"
+                        Click="OnCopyClick"/>
+                        <MenuFlyoutItem Text="粘贴"
+                        Click="OnPasteClick"/>
+                        <MenuFlyoutItem Text="剪切"
+                        Click="OnCutClick"/>
+                        <MenuFlyoutItem Text="删除"
+                        Click="OnDeleteClick"/>
+
                         <MenuFlyoutItem Text="添加注释"
                        Click="OnAddAnnotationClick" />
                         <MenuFlyoutItem Text="恢复默认"

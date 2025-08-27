@@ -328,6 +328,26 @@ namespace IDEAs.Views
             ChangeSelectedTextFontSize(2);
         }
 
+        private void OnCopyClick(object sender, RoutedEventArgs e)
+        {
+            ContentBox.Document.Selection.Copy();
+        }
+
+        private void OnPasteClick(object sender, RoutedEventArgs e)
+        {
+            ContentBox.Document.Selection.Paste(0);
+        }
+
+        private void OnCutClick(object sender, RoutedEventArgs e)
+        {
+            ContentBox.Document.Selection.Cut();
+        }
+
+        private void OnDeleteClick(object sender, RoutedEventArgs e)
+        {
+            ContentBox.Document.Selection.Text = string.Empty;
+        }
+
         private void OnDecreaseFontSize(object sender, RoutedEventArgs e)
         {
             ChangeSelectedTextFontSize(-2); // 减少2号字体
