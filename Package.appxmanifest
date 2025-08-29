@@ -11,7 +11,7 @@
   <Identity
     Name="223d2323-bd37-4ae6-98fc-a70f90853c64"
     Publisher="CN=Ming"
-    Version="1.0.9.0" />
+    Version="1.0.10.0" />
 
   <mp:PhoneIdentity PhoneProductId="223d2323-bd37-4ae6-98fc-a70f90853c64" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

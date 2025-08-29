@@ -144,10 +144,9 @@
                       Background="Transparent"
               ItemsSource="{x:Bind ViewModel.Items}"
               ItemTemplateSelector="{StaticResource ItemTemplateSelector}"
-                          SelectionMode="Single"
+                          SelectionMode="Multiple"
                           IsMultiSelectCheckBoxEnabled="{Binding IsMultiSelectEnabled, Mode=OneWay}"
-                          SelectionChanged="MyTreeView_SelectionChanged"
-                          SelectedItem="{x:Bind ViewModel._selectedFolderId, Mode=TwoWay}">
+                          SelectionChanged="MyTreeView_SelectionChanged">
                     
                 </ListView>
                 
